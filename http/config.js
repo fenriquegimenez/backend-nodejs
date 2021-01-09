@@ -3,6 +3,8 @@ module.exports = {
   stats: {
     ok: 200,
     created: 201,
-    error: 404,
+    badRequest: 400,
+    notFound: 404,
+    internalError: 500,
   },
 };

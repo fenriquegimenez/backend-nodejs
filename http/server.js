@@ -21,10 +21,12 @@ server.on("request", (req, res) => {
         body = Buffer.concat(body).toString();
 
         if (!moment(body, "YYYY-MM-DD").isValid()) {
-          res.end("No es un formato válido. Formato esperado DD-MM-YYYY");
+          res.writeHead(config.stats.badRequest);
+          res.end("No es un formato válido. Formato esperado YYYY-MM-DD");
         } else {
           let weekDayName = moment(body).format("dddd");
           if (weekDayName === "Fecha inválida") {
+            res.writeHead(config.stats.badRequest);
             res.end("Fecha inválida!");
           } else {
             res.end("Tu dia de Nacimiento es: " + weekDayName);
@@ -32,7 +34,7 @@ server.on("request", (req, res) => {
         }
       });
   } else {
-    res.statusCode = config.stats.error;
+    res.statusCode = config.stats.internalError;
     res.end();
   }
 });
