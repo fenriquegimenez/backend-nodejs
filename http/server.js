@@ -40,4 +40,4 @@ server.on("request", (req, res) => {
 });
 
 server.listen(config.port);
-console.log("Servidor escuchando en el puerto " + config.port);
+console.log("[Server] Servidor escuchando en el puerto " + config.port);
