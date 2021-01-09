@@ -1,0 +1,26 @@
+{
+  "name": "backend-nodejs",
+  "version": "0.1.0",
+  "description": "Recursos utilizados en el curso de backend con nodejs de platzi",
+  "main": "index.js",
+  "scripts": {
+    "birthday": "nodemon ./http/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fenriquegimenez/backend-nodejs.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Enrique Gimenez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fenriquegimenez/backend-nodejs/issues"
+  },
+  "homepage": "https://github.com/fenriquegimenez/backend-nodejs#readme",
+  "dependencies": {
+    "luxon": "^1.25.0",
+    "moment": "^2.29.1"
+  }
+}
